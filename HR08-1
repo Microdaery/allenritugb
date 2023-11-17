@@ -1,0 +1,16 @@
+n = int(input())
+arr = map(int, input().split())
+j=0
+a=list(arr)
+while(j<len(a)-2):
+    for i in range(len(a)-1):
+        if a[i]<a[i+1]:
+            a[i],a[i+1]=a[i+1],a[i]
+    j=j+1
+print[a]
+for c in range(len(a)-1):
+    if (a[c]==a[c+1]):
+        c=c+1
+    elif (a[c]>a[c+1]):
+        print(a[c+1])
+        break
